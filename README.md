@@ -2,34 +2,42 @@
 
 ## Project Overview
 
-This project implements K-Means clustering on interest data collected from multiple participants. The objective is to identify clusters of similar interest patterns, determine the optimal number of clusters (`k`), and evaluate clustering performance. This method can potentially be used for identifying users based on their unique interest profiles.
+This project applies **K-Means clustering** to interest data collected from multiple participants, with the aim of identifying clusters of similar interest patterns. The clustering process is enhanced by using advanced techniques such as **K-Means++ initialization**, **the elbow method**, and **silhouette analysis**. The goal is to determine optimal clusters (`k`) and evaluate the performance, which can be used for user identification based on unique interest profiles.
+
+### Key Features and Enhancements
+
+- **K-Means++ Initialization**: Enhanced initialization technique to select cluster centers, improving accuracy and convergence speed.
+- **Optimal Cluster Selection**: Implements the **elbow method** to determine the optimal number of clusters.
+- **Cluster Evaluation**: Uses **silhouette analysis** to evaluate the quality of clusters, ensuring accurate grouping of participants.
+- **User Identification**: Participants are assigned to clusters based on their interest data for potential user identification.
+- **Visualization**: Visualizations of the clusters and their centers are generated for easier interpretation of the results.
 
 ## Project Structure
 
-- **Clustering**: K-Means clustering is used to group users based on their interest data.
-- **Optimal `k` Determination**: The elbow method is employed to determine the optimal number of clusters (`k`).
-- **User Identification**: After clustering, users are assigned to their nearest cluster for potential identification.
-- **Evaluation**: The clustering is evaluated using silhouette scores and within-cluster sum of squares (WCSS).
-- **Visualization**: Cluster centers and distributions are visualized for better interpretation of results.
+- **Clustering**: K-Means clustering is performed to group users based on their interest data.
+- **Optimal Cluster Selection**: The elbow method is employed to determine the optimal number of clusters (`k`).
+- **Cluster Evaluation**: The clustering performance is evaluated using silhouette scores and the within-cluster sum of squares (WCSS).
+- **User Assignment**: Users are assigned to clusters based on their interest data.
+- **Visualization**: Cluster centers and participant distributions are visualized to interpret the results.
 
 ## Files
 
-- `data/`: Directory containing CSV files for each participant's interest data.
-- `main.R`: Main R script that processes data, performs clustering, and visualizes results.
-- `README.md`: Documentation for the project.
+- `data/`: Contains CSV files with participants' interest data.
+- `Vivian Nguyen_User Indentification From Walking Activity.R`: Main script for data processing, K-Means clustering, and result visualization.
+- `README.md`: Project documentation, outlining the steps, structure, and usage of the code.
 
 ## Requirements
 
-To run this project, ensure you have the following software installed:
+To run the project, ensure that the following software and packages are installed:
 
 - **R version 4.0 or higher**
 - **Required R Libraries**:
-  - `dplyr`
-  - `cluster`
-  - `ggplot2`
-  - `factoextra`
+  - `dplyr`: Data manipulation
+  - `cluster`: Clustering algorithms and evaluation metrics
+  - `ggplot2`: Data visualization
+  - `factoextra`: Visualization tools for clustering results
 
-You can install the necessary libraries using this command in R:
+Install the required libraries in R with the following command:
 
 ```r
 install.packages(c("dplyr", "cluster", "ggplot2", "factoextra"))
